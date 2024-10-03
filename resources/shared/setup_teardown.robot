@@ -1,6 +1,6 @@
 *** Settings ***
 Resource    ../main.robot
-Library    Screenshot
+Library     Screenshot
 
 
 *** Keywords ***

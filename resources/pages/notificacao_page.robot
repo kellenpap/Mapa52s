@@ -35,7 +35,7 @@ E seleciono a categoria
 
 E seleciono a data inicio
     Click Element    locator=//*[@id="startDate"]/div/p-calendar/span/input
-    Input Text       locator=//*[@id="startDate"]/div/p-calendar/span/input    text="10/09/2024 16:57"
+    Input Text       locator=//*[@id="startDate"]/div/p-calendar/span/input    text="10/12/2024 16:57"
 
 E preencho o campo input Titulo
     Click Element     locator=${Titulo} 
@@ -96,8 +96,6 @@ E clico em Deletar
     Click Button    locator=//*[@icon="pi pi-trash"]
 
 Então confirmo a deleção
-    # Wait Until Element Is Visible    locator=//*[@id="mat-mdc-dialog-0"]
-    # Set Focus To Element    locator=//*[@id="mat-mdc-dialog-0"]
     Wait Until Element Is Visible    locator=(//div[contains(.,'CancelarConfirmar')])[9]
     Set Focus To Element    locator=(//div[contains(.,'CancelarConfirmar')])[9]
     Click Button   locator=//button[contains(.,'Confirmar')]

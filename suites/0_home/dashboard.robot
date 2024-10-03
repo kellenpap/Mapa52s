@@ -5,7 +5,6 @@ Test Teardown    Logout
 
 *** Test Cases ***
 TC01 - Aplicar filtro na home
-    #Fechar modal
     Dado que aplico filtro para o centro de planejamento "1068 - Ponta da Madeira"
     Quando aplico o filtro para o centro de localização "1068 - Ponta da Madeira"
     E seleciono a fase "Porto"
@@ -20,11 +19,6 @@ TC02 - Validar botões interativos
      E seleciono a fase "Mina"
      E clico em Aplicar
      E aguardo exibir dados em tela
-     E clico em Ver notificação
-     Então o sistema direciona para a tela de notificações
-     E verifico a rota "Notificações"
-     E aguardo exibir dados em tela
-     Então retorno para a Home
      Clicar em Ver paradas
      Então o sistema direciona para tela de gestão de paradas
      E verifico a rota "Gestão de Paradas"

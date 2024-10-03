@@ -5,6 +5,7 @@ Resource    ../main.robot
 *** Variables ***
 &{geral}
 ...    URL= https://mapa52-frontend-dev.azurewebsites.net/
+#...    URL= https://mapa52-qa.valeglobal.net/account/fake-login
 ...    Browser=chrome  
 ...    options=add_experimental_option("detach", True)
 ${SUBTITULO}               //div[@class='title']//h4[contains(.,'Notificações sistêmicas')]
@@ -21,3 +22,6 @@ ${SALVAR}                  //button[contains(@id,'save')]
 ${CENTRO_PLANEJAMENTO}     id:planningCenter
 ${CENTRO_LOCALIZACAO}      id:localizationCenter
 ${FASE_HOME}               id:phase
+${MENU_GESTAOPARADA}       id:shutdownManagementMenu
+${MENU_PREMISSAS}          id:operationalAssumptionsMenu
+
