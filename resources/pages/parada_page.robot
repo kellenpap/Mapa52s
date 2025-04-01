@@ -55,8 +55,8 @@ E clico em Planejamento e realização
     Click Button              locator=planningAndExecutionToggleButton
 
 E seleciono as datas de planejamento
-    Input Text               locator=//*[@id="startDate"]/span/input                   text="23/12/2024 17:55"
-    Input Text               locator=//*[@id="endDate"]/span/input                     text="24/12/2024 18:55"
+    Input Text               locator=//*[@id="startDate"]/span/input                   text="27/04/2025 17:55"
+    Input Text               locator=//*[@id="endDate"]/span/input                     text="28/04/2025 18:55"
 
 
 E fecho o Planejamento e realização
@@ -72,7 +72,7 @@ E clico em Seleção de ativos
 
 
 E seleciono o grupo de ativos "${GRUPO_ATIVO}"
-    Scroll Element Into View    locator=//span[contains(.,'Exceções do grupo (0)')]
+    Scroll Element Into View    locator=//span[contains(.,'Ativos não selecionados (0)')]
     
     Set Focus To Element        locator=(//span[@aria-label='Selecione'])[1]
     Click Element               locator=(//span[@aria-label='Selecione'])[1]

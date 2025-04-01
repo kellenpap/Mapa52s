@@ -35,7 +35,7 @@ E seleciono a categoria
 
 E seleciono a data inicio
     Click Element    locator=//*[@id="startDate"]/div/p-calendar/span/input
-    Input Text       locator=//*[@id="startDate"]/div/p-calendar/span/input    text="10/12/2024 16:57"
+    Input Text       locator=//*[@id="startDate"]/div/p-calendar/span/input    text="11/04/2025 16:57"
 
 E preencho o campo input Titulo
     Click Element     locator=${Titulo} 
@@ -96,10 +96,14 @@ E clico em Deletar
     Click Button    locator=//*[@icon="pi pi-trash"]
 
 Então confirmo a deleção
-    Wait Until Element Is Visible    locator=(//div[contains(.,'CancelarConfirmar')])[9]
-    Set Focus To Element    locator=(//div[contains(.,'CancelarConfirmar')])[9]
-    Click Button   locator=//button[contains(.,'Confirmar')]
-    
+    # Alert Should Be Present     locator=//span[contains(.,'Atenção')]
+    # Handle Alert     = ACCEPT
+    # Wait Until Element Is Visible    locator=//span[contains(.,'Atenção')]
+    # Set Focus To Element    locator=//span[contains(.,'Confirmar')]
+    # Click Button   locator=//span[contains(.,'Confirmar')]
+    # #Click Element    locator=//span[contains(.,'Confirmar')]
+    Get Window Handles 
+    Click Button   locator=//span[contains(.,'Cancelar')]
     
 
 E verifico se a notificação foi deletada

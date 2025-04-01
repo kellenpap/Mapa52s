@@ -25,3 +25,4 @@ CT07 Cadastro de Paradas
     E clico em Informações da parada
     Salvar cadastro
     Então retorno para o dashboard
+
